@@ -57,7 +57,6 @@ docker push hanoguz00/ml-prediction-with-fastapi
 
 - Connect the cluster with Google terminal
 
-- 
 
 ### 7. Send your project to dockerhub
 
@@ -83,4 +82,47 @@ git remote add origin https://github.com/KuserOguzHan/ml_fastapi_1.git
 
 ```
 git push -u origin main
+```
+#### Delete origin ıf you error
+
+```
+git remote rm origin
+```
+
+### 9. Clone repository to kubernetes cluster
+
+```
+git clone https://github.com/KuserOguzHan/ml_fastapi_1.git
+```
+
+### 10 Create build.yaml for kubernetes
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mymlapp
+  labels:
+    app: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: predictor 
+          image: hanoguz00/ml-prediction-with-fastapi
+          ports:
+            - containerPort: 8000
+```
+
+### 11. Create kubernetes pods
+
+```
+kubectl apply -f build.yaml
 ```
