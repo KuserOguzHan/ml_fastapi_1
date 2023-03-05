@@ -14,15 +14,15 @@ class hepsiburada(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "memory": 230.1,
-                "ram": 37.8,
-                "screen_size": 69.2,
-                "power":5000.0,
-                "front_camera":20.0,
-                "rc1":4.0,
-                "rc3":16.0,
-                "rc5":2.0,
-                "rc7":0.0,
+                "memory": 128.0,
+                "ram": 8.0,
+                "screen_size": 6.40,
+                "power": 4310.0,
+                "front_camera": 32.0,
+                "rc1": 48.0,
+                "rc3": 8.0 ,
+                "rc5": 2.0,
+                "rc7": 2.0,
 
             }
         }

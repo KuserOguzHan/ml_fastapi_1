@@ -28,7 +28,7 @@ def make_hepsiburada_prediction(model, request):
 
     return prediction[0]
 
-# Advertising Prediction endpoint
+# Hepsiburada Prediction endpoint
 @app.post("/prediction/hepsiburada")
 def predict_hepsiburada(request: hepsiburada):
     prediction = make_hepsiburada_prediction(estimator_hepsiburada_loaded, request.dict())
