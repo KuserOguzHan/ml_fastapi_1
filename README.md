@@ -6,7 +6,7 @@
     - FastApi
     - Cloud
 
-### 1.Pip Install
+### 1. Pip Install
 ```
 pip install -r requirements.txt
 ```   
